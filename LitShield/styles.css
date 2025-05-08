@@ -176,7 +176,38 @@
     display: none;
   }
   
-  
+  /* el botón cuando se hace más pequeño */
+.small-button {
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem; /* Mueve el botón hacia abajo */
+  display: block; /* Asegura que el botón esté en una nueva línea */
+  width: auto; /* Ajusta el ancho automáticamente */
+  transform: scale(0.9); /* Hace el botón más pequeño */
+  transition: all 0.3s ease; /* Transición suave */
+}
+/* estilos planes */
+.plan-container {
+  margin-bottom: 2rem;
+}
+
+.plan {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.plan img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.plan h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
   /* Estilos del pie de página */
   footer {
     background-color: #2C1E4B; /* Morado oscuro */
