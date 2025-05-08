@@ -29,31 +29,27 @@
     </div>
   </header>
 
+  <section id="fondo">
+    <video autoplay muted loop class="video-fondo">
+        <source src="video/fondo.mp4" type="video/mp4">
+    </video>
+    
+</section>  
+  
   <!-- Contenedor principal -->
   <main>
-    <section id="inicio" class="info-box" data-aos="fade-up" style="display: flex; align-items: center; gap: 20px;">
-      <img src="img/srC.jfif" alt="Seguridad Web" style="width: 300px; height: 400px; object-fit: cover; border-radius: 10px;">
-      <div>
-        <h2>Bienvenido a LitShield</h2>
-        <p>En LitShield, nos especializamos en proteger tu mundo digital con soluciones avanzadas de ciberseguridad.</p>
-        <div id="infoAdicional">
-          <p>Nuestro equipo está comprometido a garantizar la seguridad de tus datos y la confianza de tus usuarios.</p>
-          <p>Descubre cómo nuestras auditorías, pruebas de penetración y capacitaciones personalizadas pueden ayudarte a mantener tu presencia en línea segura y confiable.</p>
-        </div>
-        <button id="mostrarInfoBtn" style="margin-top: 10px;">Descubre más</button>
+    <section id="inicio" class="info-box" data-aos="fade-up">
+      <h2>Bienvenido a LitShield</h2>
+      <p>En LitShield, nos dedicamos a proteger tu sitio web contra amenazas digitales. Descubre cómo podemos ayudarte a mantener tu presencia en línea segura.</p>
+      <button id="mostrarInfoBtn">Mostrar más información</button>
+      <div id="informacionAdicional" class="hidden">
+        <p>La seguridad web es fundamental para proteger tus datos y garantizar la confianza de tus usuarios.</p>
       </div>
     </section>
 
-
-
-    <section id="servicios" class="info-box" data-aos="fade-left">
+    <section id="servicios" class="info-box" data-aos="fade-up">
       <h2>¿Qué hacemos?</h2>
       <p>Ofrecemos auditorías de seguridad, pruebas de penetración (pentesting), asesoría en protección de datos y capacitaciones personalizadas en ciberseguridad.</p>
-    <div class="contact-info">
-      <p>Para más información sobre nuestros servicios, contáctanos:</p>
-
-    </div>
-    <button class="botonEspecial" onclick="window.location.href='planes.html'">Ver Planes</button>
     </section>
 
     <section id="blog" class="info-box" data-aos="fade-up" data-aos-delay="200">
@@ -83,6 +79,5 @@
   <script>
     AOS.init();
   </script>
-  <script src="js/script.js"></script> <!-- Agrega esta línea -->
 </body>
 </html>
