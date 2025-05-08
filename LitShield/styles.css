@@ -3,182 +3,122 @@
     padding: 0;
     box-sizing: border-box;
   }
-  /*responsive*/
-  @media (max-width: 480px) {
-    .info-box {
-      flex-direction: column;
-      text-align: center;
-    }
-    img {
-      margin-bottom: 1rem;
-    }
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
+  
+  /* Estilo base */
   body {
-    cursor: url('custom-cursor.png'), auto;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #352459, #4A286E);
-    animation: gradient-animation 10s ease infinite;
+    font-family: Arial, sans-serif;
+    background-color: #352459ee;
+    color: white;
+    line-height: 1.6;
   }
   
-  @keyframes gradient-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+  /* HEADER */
   header {
-    background-color: #5DBF93; /* Verde claro */
-    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(44, 30, 75, 0.95);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header .logo h1 {
+    margin: 0;
+  }
+  
+  .corporate-header .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    background-image: url('header-image.jpg'); /* Pon la URL de tu imagen */
-    background-size: cover;
-    background-position: center;
-    padding: 4rem 2rem;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
   }
-  /*
-  poner un video de fonde al header...............
-
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; 
-}
-
-*/
   
-header .logo h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  color: #FFFFFF;
-}
+  .corporate-header .logo p {
+    font-size: 1rem;
+    color: #5DBF93;
+  }
   
-  /* ...existing code... */
-
-/* Header corporativo */
-.corporate-header {
-  background-color: #2C1E4B; /* Morado oscuro */
-  color: white;
-  padding: 1rem 2rem;
-  text-align: center;
-  position: relative;
-}
-
-.corporate-header .header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.corporate-header .logo h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-.corporate-header .logo p {
-  font-size: 1rem;
-  margin: 0;
-  color: #5DBF93; /* Verde claro */
-}
-
-/* Sticky menu */
-.sticky-menu {
-  background: linear-gradient(90deg, #4A286E, #352459); /* Gradiente horizontal */
-  padding: 0.5rem 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.sticky-menu ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-.sticky-menu ul li {
-  margin: 0 15px;
-}
-
-.sticky-menu ul li a:hover {
-  color: #FFFFFF; /* Blanco */
-}
-
-.sticky-menu ul li a:hover {
-  color: #5DBF93; /* Verde claro */
-}
-
-/* ...existing code... */
-
-  nav ul {
-    list-style-type: none;
+  .sticky-menu {
+    background-color: #4A286E;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .sticky-menu ul {
+    list-style: none;
     display: flex;
+    justify-content: center;
   }
   
-  nav ul li {
-    margin-right: 20px;
+  .sticky-menu ul li {
+    margin: 0 15px;
   }
   
-  nav ul li a {
+  .sticky-menu ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
+    transition: color 0.3s ease;
   }
   
-  nav ul li a:hover {
-    text-decoration: underline;
+  .sticky-menu ul li a:hover {
+    color: #5DBF93;
   }
   
+  /* VIDEO DE FONDO */
+  #fondo {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    margin-top: calc(80px + 50px); /* altura aprox del header (ajusta si header es más alto) */
+  }
+  
+  .video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  #fondo::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 0;
+  }
+  
+  /* MAIN */
   main {
     padding: 2rem;
-    background: linear-gradient(50deg,#4A286E, #4A286E); /* Fondo con gradiente */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 0;
   }
   
+  
+  
+  /* INFO BOX */
   .info-box {
-    background: linear-gradient(15deg,#4A286E, #51a6805b , #4A286E); /* Gradiente de verde a morado */
+    background-color: #4A286E;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     margin-bottom: 2rem;
-    animation: wipe-in-bottom-right 2.5s cubic-bezier(.25, 1, .30, 1) both;
   }
-
-/* Transición suave para el cambio de tamaño del contenedor */
-#infoAdicional {
-  overflow: hidden; /* Evita que el contenido se desborde durante la transición */
-  max-height: 0; /* Oculta el contenido inicialmente */
-  transition: max-height 0.5s ease, padding 0.5s ease; /* Transición suave para mostrar/ocultar */
-}
-
-#infoAdicional.show {
-  max-height: 500px; /* Ajusta el valor según el contenido máximo */
-  padding-top: 1rem; /* Agrega espacio al expandir */
-}
-
-.info-box h2 {
-  color: #FFFFFF; /* Blanco */
-  margin-bottom: 1rem;
-}
-
-.info-box p {
-  color: #E8F8F5; /* Verde muy claro */
-}
+  
+  .info-box h2 {
+    margin-bottom: 1rem;
+  }
   
   button {
-    background-color: #4c9c78; /* Verde aquamarina */
+    background-color: #5dbf93e1;
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -189,89 +129,20 @@ header .logo h1 {
   }
   
   button:hover {
-    background-color: #5DBF93;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #4a9f78;
+    transform: scale(1.05);
   }
-  
   
   .hidden {
     display: none;
   }
   
-/* Animación personalizada combinada */
-@keyframes wipe-in-bottom-right {
-  from {
-    clip-path: polygon(150% 50%, 150% 50%, 50% 150%, 50% 150%);
-    transform: translateY(50px); /* Aparece desde abajo */
-    opacity: 0; /* Comienza invisible */
-    background-color: #5DBF93; /* Verde claro */
-  }
-  to {
-    clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
-    transform: translateY(0); /* Llega a su posición original */
-    opacity: 1; /* Totalmente visible */
-    background-color: #4A286E; /* Morado más claro */
-  }
-}
-
-/* Aplica la animación combinada a los contenedores */
-.info-box {
-  background-color: #4A286E; /* Morado más claro */
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 2rem;
-  animation: wipe-in-bottom-right 2.5s cubic-bezier(.25, 1, .30, 1) both; /* Aplica la animación combinada */
-}
-  /* el botón cuando se hace más pequeño */
-.small-button {
-  font-size: 0.8rem;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem; /* Mueve el botón hacia abajo */
-  display: block; /* Asegura que el botón esté en una nueva línea */
-  width: auto; /* Ajusta el ancho automáticamente */
-  transform: scale(0.9); /* Hace el botón más pequeño */
-  transition: all 0.3s ease; /* Transición suave */
-}
-/* estilos planes */
-.plan-container {
-  margin-bottom: 2rem;
-}
-
-.plan {
-  text-align: center;
-  margin: 1rem 0;
-}
-
-.plan img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-.plan h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-  /* Estilos del pie de página */
+  /* FOOTER */
   footer {
-    background-color: #2C1E4B; /* Morado oscuro */
+    background-color: #2C1E4B;
     padding: 1rem;
     text-align: center;
-    color: white;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 10; 
     border-radius: 40px;
-  }
-  
-  main {
-    padding-bottom: 3rem; 
   }
   
   .social-links a {
@@ -282,8 +153,21 @@ header .logo h1 {
   }
   
   .social-links a:hover {
-    color: #4a9f78;
-    transform: scale(1.2);
+    color: #5DBF93;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    header {
+      text-align: center;
+      flex-direction: column;
+    }
+    nav ul {
+      flex-direction: column;
+    }
+    .info-box {
+      padding: 1rem;
+    }
   }
   
   
