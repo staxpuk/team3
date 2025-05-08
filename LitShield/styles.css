@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /*responsive*/
+  @media (max-width: 768px) {
+    header {
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      flex-direction: column;
+    }
+    .info-box {
+      padding: 1rem;
+    }
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #352459ee; /* Morado oscuro */
+    color: white;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #5DBF93; /* Verde claro */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-image: url('header-image.jpg'); /* Pon la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+  }
+  /*
+  poner un video de fonde al header...............
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+*/
+  
+  header .logo h1 {
+    margin: 0;
+  }
+  
+  /* ...existing code... */
+
+/* Header corporativo */
+.corporate-header {
+  background-color: #2C1E4B; /* Morado oscuro */
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.corporate-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.corporate-header .logo h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.corporate-header .logo p {
+  font-size: 1rem;
+  margin: 0;
+  color: #5DBF93; /* Verde claro */
+}
+
+/* Sticky menu */
+.sticky-menu {
+  position: sticky;
+  top: 0;
+  background-color: #4A286E; /* Morado más claro */
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-menu ul li {
+  margin: 0 15px;
+}
+
+.sticky-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.sticky-menu ul li a:hover {
+  color: #5DBF93; /* Verde claro */
+}
+
+/* ...existing code... */
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos del contenedor de información */
+  main {
+    padding: 2rem;
+  }
+  
+  .info-box {
+    background-color: #4A286E; /* Morado más claro */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+  }
+  
+  .info-box h2 {
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    background-color: #5dbf93e1;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4a9f78;
+    transform: scale(1.05);
+  }
+  
+  
+  .hidden {
+    display: none;
+  }
+  
+  
+  /* Estilos del pie de página */
+  footer {
+    background-color: #2C1E4B; /* Morado oscuro */
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 10; 
+    border-radius: 40px;
+  }
+  
+  main {
+    padding-bottom: 3rem; 
+  }
+  
+  .social-links a {
+    margin-right: 15px;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    color: #5DBF93;
+  }
+  
+  
