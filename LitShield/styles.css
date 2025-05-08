@@ -4,26 +4,32 @@
     box-sizing: border-box;
   }
   /*responsive*/
-  @media (max-width: 768px) {
-    header {
-      padding: 1rem;
+  @media (max-width: 480px) {
+    .info-box {
+      flex-direction: column;
       text-align: center;
     }
-    nav ul {
-      flex-direction: column;
-    }
-    .info-box {
-      padding: 1rem;
+    img {
+      margin-bottom: 1rem;
     }
   }
-  
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    font-family: Arial, sans-serif;
-    background-color: #352459ee; /* Morado oscuro */
-    color: white;
-    line-height: 1.6;
+    cursor: url('custom-cursor.png'), auto;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #352459, #4A286E);
+    animation: gradient-animation 10s ease infinite;
   }
   
+  @keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
   header {
     background-color: #5DBF93; /* Verde claro */
     padding: 1rem 2rem;
@@ -51,9 +57,11 @@
 
 */
   
-  header .logo h1 {
-    margin: 0;
-  }
+header .logo h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #FFFFFF;
+}
   
   /* ...existing code... */
 
@@ -86,11 +94,8 @@
 
 /* Sticky menu */
 .sticky-menu {
-  position: sticky;
-  top: 0;
-  background-color: #4A286E; /* Morado más claro */
+  background: linear-gradient(90deg, #4A286E, #352459); /* Gradiente horizontal */
   padding: 0.5rem 1rem;
-  z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -106,11 +111,8 @@
   margin: 0 15px;
 }
 
-.sticky-menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+.sticky-menu ul li a:hover {
+  color: #FFFFFF; /* Blanco */
 }
 
 .sticky-menu ul li a:hover {
@@ -138,25 +140,45 @@
     text-decoration: underline;
   }
   
-  /* Estilos del contenedor de información */
   main {
     padding: 2rem;
+    background: linear-gradient(50deg,#4A286E, #4A286E); /* Fondo con gradiente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .info-box {
-    background-color: #4A286E; /* Morado más claro */
+    background: linear-gradient(15deg,#4A286E, #51a6805b , #4A286E); /* Gradiente de verde a morado */
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
+    animation: wipe-in-bottom-right 2.5s cubic-bezier(.25, 1, .30, 1) both;
   }
-  
-  .info-box h2 {
-    margin-bottom: 1rem;
-  }
+
+/* Transición suave para el cambio de tamaño del contenedor */
+#infoAdicional {
+  overflow: hidden; /* Evita que el contenido se desborde durante la transición */
+  max-height: 0; /* Oculta el contenido inicialmente */
+  transition: max-height 0.5s ease, padding 0.5s ease; /* Transición suave para mostrar/ocultar */
+}
+
+#infoAdicional.show {
+  max-height: 500px; /* Ajusta el valor según el contenido máximo */
+  padding-top: 1rem; /* Agrega espacio al expandir */
+}
+
+.info-box h2 {
+  color: #FFFFFF; /* Blanco */
+  margin-bottom: 1rem;
+}
+
+.info-box p {
+  color: #E8F8F5; /* Verde muy claro */
+}
   
   button {
-    background-color: #5dbf93e1;
+    background-color: #4c9c78; /* Verde aquamarina */
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -167,8 +189,9 @@
   }
   
   button:hover {
-    background-color: #4a9f78;
-    transform: scale(1.05);
+    background-color: #5DBF93;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   }
   
   
@@ -176,6 +199,31 @@
     display: none;
   }
   
+/* Animación personalizada combinada */
+@keyframes wipe-in-bottom-right {
+  from {
+    clip-path: polygon(150% 50%, 150% 50%, 50% 150%, 50% 150%);
+    transform: translateY(50px); /* Aparece desde abajo */
+    opacity: 0; /* Comienza invisible */
+    background-color: #5DBF93; /* Verde claro */
+  }
+  to {
+    clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+    transform: translateY(0); /* Llega a su posición original */
+    opacity: 1; /* Totalmente visible */
+    background-color: #4A286E; /* Morado más claro */
+  }
+}
+
+/* Aplica la animación combinada a los contenedores */
+.info-box {
+  background-color: #4A286E; /* Morado más claro */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  animation: wipe-in-bottom-right 2.5s cubic-bezier(.25, 1, .30, 1) both; /* Aplica la animación combinada */
+}
   /* el botón cuando se hace más pequeño */
 .small-button {
   font-size: 0.8rem;
@@ -234,7 +282,8 @@
   }
   
   .social-links a:hover {
-    color: #5DBF93;
+    color: #4a9f78;
+    transform: scale(1.2);
   }
   
   

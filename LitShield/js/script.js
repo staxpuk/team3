@@ -1,13 +1,11 @@
 document.getElementById('mostrarInfoBtn').addEventListener('click', function() {
-  var info = document.getElementById('informacionAdicional');
-  if (info.classList.contains('hidden')) {
-    info.classList.remove('hidden');
-    this.textContent = 'Ocultar información';
-    this.classList.add('small-button'); // Agrega la clase para cambiar el estilo
+  var info = document.getElementById('infoAdicional');
+  if (info.classList.contains('show')) {
+    info.classList.remove('show'); // Oculta el contenido adicional
+    this.textContent = 'Descubre más'; // Cambia el texto del botón
   } else {
-    info.classList.add('hidden');
-    this.textContent = 'Mostrar más información';
-    this.classList.remove('small-button'); // Quita la clase para restaurar el estilo
+    info.classList.add('show'); // Muestra el contenido adicional
+    this.textContent = 'Ocultar información'; // Cambia el texto del botón
   }
 });
 
@@ -21,6 +19,3 @@ document.getElementById('mostrarInfoBtn').addEventListener('click', function() {
       autoplaySpeed: 2000,
     });
   });
-
-  
-  
