@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguridad Web - LitShield</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header class="corporate-header">
+    <div class="header-content">
+      <div class="logo">
+        <h1>LitShield</h1>
+        <p>Protegiendo tu mundo digital</p>
+      </div>
+      <nav class="sticky-menu">
+        <ul>
+          <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="#servicios"><i class="fas fa-cogs"></i> Servicios</a></li>
+          <li><a href="#blog"><i class="fas fa-blog"></i> Blog</a></li>
+          <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Video de fondo en el header -->
+    <section id="fondo">
+      <video autoplay muted loop class="video-fondo">
+        <source src="video/fondo.mp4" type="video/mp4">
+      </video>
+    </section>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main>
+    <section id="inicio" class="info-box" data-aos="fade-up" style="display: flex; align-items: center; gap: 20px;">
+      <img src="img/srC.jfif" alt="Seguridad Web" style="width: 300px; height: 400px; object-fit: cover; border-radius: 10px;">
+      <div>
+        <h2>Bienvenido a LitShield</h2>
+        <p>En LitShield, nos especializamos en proteger tu mundo digital con soluciones avanzadas de ciberseguridad.</p>
+        <div id="infoAdicional">
+          <p>Nuestro equipo está comprometido a garantizar la seguridad de tus datos y la confianza de tus usuarios.</p>
+          <p>Descubre cómo nuestras auditorías, pruebas de penetración y capacitaciones personalizadas pueden ayudarte a mantener tu presencia en línea segura y confiable.</p>
+        </div>
+        <button id="mostrarInfoBtn" style="margin-top: 10px;">Descubre más</button>
+      </div>
+    </section>
+
+    <section id="servicios" class="info-box" data-aos="fade-left">
+      <h2>¿Qué hacemos?</h2>
+      <p>Ofrecemos auditorías de seguridad, pruebas de penetración (pentesting), asesoría en protección de datos y capacitaciones personalizadas en ciberseguridad.</p>
+      <div class="contact-info">
+        <p>Para más información sobre nuestros servicios, contáctanos:</p>
+      </div>
+      <button class="botonEspecial" onclick="window.location.href='planes.html'">Ver Planes</button>
+    </section>
+
+    <section id="blog" class="info-box" data-aos="fade-up" data-aos-delay="200">
+      <h2>Blog</h2>
+      <p>Explora nuestros artículos y consejos sobre ciberseguridad para mantenerte informado sobre las últimas tendencias y amenazas.</p>
+    </section>
+
+    <section id="contacto" class="info-box" data-aos="fade-up" data-aos-delay="400">
+      <h2>Contáctanos</h2>
+      <p>¿Tienes preguntas o necesitas ayuda? Ponte en contacto con nosotros y estaremos encantados de asistirte.</p>
+    </section>
+  </main>
+
+  <footer data-aos="fade-up" data-aos-delay="300">
+    <div>
+      <p>&copy; 2025 LitShield. Todos los derechos reservados.</p>
+      <p>Síguenos en nuestras redes sociales:</p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
